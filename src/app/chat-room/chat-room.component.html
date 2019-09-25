@@ -1,0 +1,11 @@
+<h2>Vous êtes connecté en tant que {{ username }}</h2>
+<div class="messages"></div>
+
+<div class="messages">
+  <p *ngFor="let message of messages">
+    <strong>{{ message.username }} :</strong> {{ message.content }}
+  </p>
+</div>
+
+<input #message placeholder="Tapez le message que vous voulez ..." />
+<button (click)="send(message.value)">Envoyer</button>
